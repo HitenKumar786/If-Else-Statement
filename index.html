@@ -9,7 +9,7 @@
 <body>
     
 <h1>Taking User Input</h1>
-<form onsubmit="doSum(); return false">
+<form onsubmit = "doSum(); return false">
 
     num1: <input id="num1" type="number" required>
     <br>
@@ -18,37 +18,42 @@
     num2: <input id="num2" type="number" required>
     <br>
     <button type="submit">submit</button>
+    
+    
 </form>
 
 <h3 id="result">    </h3>
 <script>
 
-    function doSum(){
+    
+function doSum()
+{
+
 
 let firstNumber = +(document.querySelector("#num1").value)
 let secondNumber = +(document.querySelector("#num2").value)
 let operation = document.querySelector("#operation").value
 
+let resultElement = document.querySelector("#result")
+
    if(operation === "+"){
-        resulElement.innerHTML = firstNumber+secondNumber
+        resultElement.innerHTML = firstNumber+secondNumber
      }     
 
-     else if(operation ==="-")
+     else if(operation === "-")
      {
         resultElement.innerHTML = firstNumber-secondNumber
      }
     
-     else if(operation ==="*")
+     else if(operation === "*")
      {
         resultElement.innerHTML = firstNumber*secondNumber
      }
      
-     else if(operation ==="/")
+     else if(operation === "/")
      {
         resultElement.innerHTML = firstNumber/secondNumber
      }
-    
-    
     
     }
 </script>
